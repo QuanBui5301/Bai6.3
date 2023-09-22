@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6.3</title>
+</head>
+<body>
+<input id="so" type="text">
+<br>
+<br>
+<button id="one" onclick="so(1)">1</button>
+<button id="two" onclick="so(2)">2</button>
+<button id="three" onclick="so(3)">3</button>
+<button id="plus" onclick="so('+')">+</button>
+<br>
+<button id="four" onclick="so(4)">4</button>
+<button id="five" onclick="so(5)">5</button>
+<button id="six" onclick="so(6)">6</button>
+<button id="del" onclick="so('-')">-</button>
+<br>
+<button id="seven" onclick="so(7)">7</button>
+<button id="eight" onclick="so(8)">8</button>
+<button id="nine" onclick="so(9)">9</button>
+<button id="multi" onclick="so('*')">x</button>
+<br>
+<button>#</button>
+<button id="zero" onclick="so(0)">0</button>
+<button>#</button>
+<button id="div" onclick="so('/')">%</button>
+<br>
+<button id="sqrt" onclick="tinhsqrt()">√</button>
+<button id="sqr" onclick="tinhsqr()">^2</button>
+<button id="equal" onclick="result()">=</button>
+<button id="clear" onclick="clearAll()">C</button>
+<script>
+    function so(i) {
+        document.getElementById("so").value += i.toString()
+    }
+    function result() {
+        let input = document.getElementById('so').value
+        document.getElementById('so').value = eval(input)
+    }
+    function tinhsqrt() {
+        let a = document.getElementById('so').value
+        document.getElementById('so').value = Math.sqrt(a)
+    }
+    function tinhsqr() {
+        let a = document.getElementById('so').value
+        document.getElementById('so').value = a*a
+    }
+    function clearAll() {
+        document.getElementById('so').value = ""
+    }
+    Math.PI
+</script>
+</body>
+</html>
